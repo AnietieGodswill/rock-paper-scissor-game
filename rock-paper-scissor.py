@@ -1,8 +1,8 @@
 import random
 Comp_point = 0
 Your_point = 0
-print("Enter --> stone | paper | scissor")
-Random_ = ["stone", "paper", "scissor"]
+print("Enter --> rock | paper | scissor")
+Random_ = ["rock", "paper", "scissor"]
 while True:
     InpuT = str(input("User: "))
 
@@ -12,7 +12,7 @@ while True:
         print("Tie (0 point)")
 
     #In case of paper
-    elif InpuT == "paper" and RandoM == "stone":
+    elif InpuT == "paper" and RandoM == "rock":
         print("You win (1 point)")
         Your_point = Your_point + 1
     elif InpuT == "paper" and RandoM == "scissor":
@@ -23,15 +23,15 @@ while True:
     elif InpuT == "scissor" and RandoM == "paper":
         print("You win (1 point)")
         Your_point = Your_point + 1
-    elif InpuT == "scissor" and RandoM == "stone":
+    elif InpuT == "scissor" and RandoM == "rock":
         print("Computer win (1 point)")
         Comp_point = Comp_point + 1
 
     #In case of stone
-    elif InpuT == "stone" and RandoM == "scissor":
+    elif InpuT == "rock" and RandoM == "scissor":
         print("You win (1 point)")
         Your_point = Your_point + 1
-    elif InpuT == "stone" and RandoM == "paper":
+    elif InpuT == "rock" and RandoM == "paper":
         print("Computer win (1 point)")
         Comp_point = Comp_point + 1
     else:
@@ -45,3 +45,4 @@ while True:
         print("you lost the game")
         print(f"computer beat you with {Comp_point - Your_point} points")
         break
+
